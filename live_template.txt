@@ -1,0 +1,23 @@
+import 'package:built_value/built_value.dart';
+import 'package:built_value/serializer.dart';
+
+part '$file_name$.g.dart';
+
+abstract class $class_name$ implements Built<$class_name$, $class_name$Builder> {
+  
+  $END$
+
+  $class_name$._();
+
+  static Serializer<$class_name$> get serializer => _$$$class_name_lower$Serializer;
+
+  factory $class_name$([void Function($class_name$Builder)? updates]) =
+      _$$$class_name$;
+}
+
+
+//////////
+variables
+file_name -> fileNameWithoutExtension()
+class_name -> capitalize(camelCase(fileNameWithoutExtension()))
+class_name_lower -> camelCase(fileNameWithoutExtension())
