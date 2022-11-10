@@ -9,3 +9,17 @@ dependencies:
 dev_dependencies:
     build_runner: ^2.3.2
     built_value_generator: ^8.4.2
+
+
+
+### Default Serializers
+
+part 'default_serializers.g.dart';
+
+@SerializersFor([
+  ResponseDto,
+])
+final Serializers serializers = (_$serializers.toBuilder()
+      ..add(DateTimeSerializer())
+      ..addPlugin(StandardJsonPlugin()))
+    .build();
